@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+
+    <div class="jumbotron">
+
+        {% if current_user.is_authenticated %}
+            {{ url_for('error_pages.error_403') }}
+
+        {% else %}
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    {{ form.email.label(class="form-group col-md-4") }}
+                    {{ form.email(class="form-control") }}
+                </div>
+
+                <div class="form-group col-md-4">
+                    {{ form.password.label(class="form-group col-md-4") }}
+                    {{ form.password(class="form-control") }}
+                </div>
+                <br>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+            </div>
+
+    </div>
+</form>
+
+{% endif %}
+{% endblock %}

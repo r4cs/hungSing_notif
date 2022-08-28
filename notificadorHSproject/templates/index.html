@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="jumbotron">
+        <div align='center'>
+
+            {% if current_user.confirmed and  current_user.is_authenticated %}
+            <h3>Bem vindx ao notificador Hung Sing</h3>
+            <br>
+            <p>Você está logado (: </p>
+            <p>Contato: n0t1f1c4d0r@gmail.com</p>
+
+            {% else %}
+
+            <h3>Olá, bem-vindx ao Notificador Hung Sing</h3>
+            <br>
+            <p style="text-align:left;">Receba as informações sobre as atividades presenciais e on-line desenvolvidas pelos colaboradores da Hung Sing. <b>Ao se inscrever no notificador você receberá, direto no whatsapp, informações relevantes sobre as aulas, simples assim.</b></p>
+            <p style="text-align:left;">Não perca mais nenhuma live, <b>te enviaremos os links e horários das aulas on-line durante a quarentena</b>, e assim que as atividades forem normalizadas você nunca mais vai errar os dias em que deve levar seus equipamentos de luta 😉</p>
+            <p style="text-align:left;"><b>Nos organizamos daqui o que você precisa saber aí.</b></p>
+            <br>
+            <p style="text-align:left;">Faça login ou registre-se!</p>
+            <p style="text-align:left;">Contato: n0t1f1c4d0r@gmail.com</p>
+            <p style="text-align:left;">KINLAI</p>
+
+
+<!--            <h3>Bem vindx ao notificador Hung Sing</h3>-->
+<!--            <br>-->
+<!--            <p>Ao registrar-se você receberá notificações referentes às aulas de luta, bem como quais equipamentos levar.-->
+<!--                <br> Chega de sofrência (:</p>-->
+<!--            <br>-->
+<!--            <p>Faça login ou registre-se!</p>-->
+<!--            <p>Contato: n0t1f1c4d0r@gmail.com</p>-->
+
+            {% endif %}
+
+        </div>
+    </div>
+
+
+{% endblock %}

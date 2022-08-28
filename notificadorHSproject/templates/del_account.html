@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <div align='center'>
+    <h1 >Olá {{current_user.username}}</h1>
+    <p>Ao apagar a sua conta, voocê não receberá mais notificações, tem certeza que deseja excluí-la?</p>
+  </div>
+    <div class="container">
+  <form  method="POST" action = "" enctype="multipart/form-data">
+    {{ del_form.hidden_tag() }}
+
+    <div class="form-group" align="center">
+        {{ del_form.submit(class="btn btn-danger") }}
+    </div>
+  </form>
+
+</div>
+</div>
+
+
+{% endblock content %}
